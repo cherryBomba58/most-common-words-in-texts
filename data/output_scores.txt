@@ -1,0 +1,214 @@
+blood,40
+sky,37
+fire,34
+sword,32
+hail,31
+king,28
+god,28
+heart,27
+battle,24
+death,23
+day,22
+wind,21
+world,21
+man,20
+glory,20
+kingdom,19
+thunder,19
+side,18
+brother,18
+Valhalla,17
+Odin,16
+steel,16
+night,16
+war,15
+life,15
+wheel,15
+fight,15
+hell,14
+sea,13
+son,13
+woman,12
+hand,12
+ride,11
+earth,11
+metal,11
+end,11
+land,11
+slave,10
+air,10
+time,10
+power,10
+warrior,10
+army,9
+sound,9
+hall,9
+hammer,9
+soul,8
+gate,8
+stand,8
+Asgard,8
+light,7
+Kings,7
+eye,7
+call,7
+ground,7
+doom,7
+name,7
+Ye,7
+hero,7
+body,7
+spirit,6
+word,6
+lord,6
+battlefield,6
+wolf,6
+friend,6
+today,6
+story,6
+thee,6
+Valkyries,6
+rain,6
+CROWN,5
+giant,5
+band,5
+burning,5
+pride,5
+weapon,5
+darkness,5
+house,5
+victory,5
+RING,5
+home,5
+sign,5
+right,5
+road,5
+whirlwind,4
+rune,4
+horse,4
+valiant dead,4
+Hail Gods,4
+Metal Kings,4
+Sworn,4
+ray,4
+Thor,4
+bringer,4
+strength,4
+pain,4
+immortal,4
+thy friend,4
+fear,4
+honor,4
+fist,4
+voice,4
+string,4
+thy weapon,4
+rage,4
+rainbow bridge,4
+lie,4
+father,4
+hallelujah,4
+head,4
+Dixie land,4
+providence,3
+dance,3
+Freedom,3
+door,3
+Open Valhalla,3
+killer,3
+fame,3
+spear,3
+Nessun Dorma,3
+burnin,3
+Gonna,3
+white light,3
+ass,3
+warriors friend,3
+divine right hail,3
+raven,3
+dominion,3
+Long,3
+heavy metal,3
+tonight,3
+greatest gift,3
+way,3
+reason,3
+fallen brother,3
+thy fate,3
+Storm,3
+bridge,3
+demon,3
+enemy,3
+truth,3
+heaven,3
+thee home,3
+smoke,3
+grandfather,2
+line,2
+crusade,2
+world tree,2
+tire,2
+charge,2
+sail,2
+throne,2
+ENGLAND,2
+sacrifice,2
+hill,2
+mead,2
+Vincer,2
+stelle,2
+living,2
+Tramontate,2
+reign,2
+shape,2
+ruler,2
+rider,2
+true metal people,2
+golden voice,2
+sorcery,2
+silence,2
+saddle,2
+thy command,2
+memory,2
+whip,2
+attack,2
+fire ride,2
+arm,2
+limb,2
+Chariot drive,2
+unity,2
+power shinning,2
+mountain,2
+Louder,2
+hot blood,2
+knee,2
+chain,2
+lightning,2
+berserker rage,2
+majesty,2
+mine,2
+price,2
+forest,2
+revenge,2
+beast,2
+magic fall,2
+real story,2
+path,2
+spark,2
+serpent,2
+own disciple,2
+magic,2
+true metal,2
+prayer,2
+Dixie,2
+battle horn,2
+flash,2
+thousand,2
+eagle,2
+false pride,2
+crowd,2
+thy Valkyries,2
+star,2
+soldier,2
+deed,2
+gift,2
