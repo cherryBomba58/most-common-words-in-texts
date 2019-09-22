@@ -1,0 +1,18 @@
+land,6
+Valhalla,4
+battlefield,4
+Odin,4
+sea,4
+valiant dead,3
+battle,3
+rainbow bridge,3
+bringer,3
+Asgard,2
+world,2
+ride,2
+sky,2
+day,2
+god,2
+hall,2
+living,2
+giant,2

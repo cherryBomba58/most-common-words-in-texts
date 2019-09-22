@@ -1,0 +1,8 @@
+Death,6
+hell,4
+house,4
+darkness,3
+fire,3
+soul,2
+gate,2
+army,2

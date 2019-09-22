@@ -1,0 +1,11 @@
+side,3
+mead,2
+life,2
+Ye,2
+hero,2
+death,2
+day,2
+Valkyries,2
+night,2
+Asgard,2
+hall,2

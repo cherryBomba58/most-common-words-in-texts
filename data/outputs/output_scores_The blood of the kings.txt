@@ -1,0 +1,14 @@
+blood,15
+king,8
+sword,6
+Metal,4
+Kings,4
+dance,3
+string,3
+Metal Kings,3
+side,3
+death,3
+WORLD,3
+crusade,2
+brother,2
+ENGLAND,2

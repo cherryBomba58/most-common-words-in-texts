@@ -1,0 +1,4 @@
+heart,8
+stand,4
+steel,4
+fire,2

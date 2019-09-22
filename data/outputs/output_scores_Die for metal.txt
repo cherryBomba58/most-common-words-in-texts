@@ -1,0 +1,10 @@
+air,4
+hell,4
+fist,4
+head,3
+metal,3
+heavy metal,3
+battle,2
+brother,2
+true metal,2
+Louder,2

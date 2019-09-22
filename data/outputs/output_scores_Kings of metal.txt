@@ -1,0 +1,6 @@
+band,5
+ass,3
+burnin,3
+Gonna,3
+true metal people,2
+king,2

@@ -1,0 +1,10 @@
+sea,2
+sail,2
+Valhalla,2
+son,2
+fire,2
+battle,2
+Wind,2
+Odin,2
+sword,2
+sky,2

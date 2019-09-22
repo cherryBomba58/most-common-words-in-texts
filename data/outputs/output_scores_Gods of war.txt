@@ -1,0 +1,27 @@
+sky,8
+fight,6
+story,4
+lord,4
+glory,4
+immortal,4
+heart,4
+wind,4
+war,4
+thunder,4
+god,4
+rage,4
+end,4
+sword,4
+doom,4
+Valhalla,3
+battle horn,2
+blood,2
+thee,2
+day,2
+today,2
+sign,2
+Odin,2
+night,2
+hammer,2
+thy Valkyries,2
+ground,2

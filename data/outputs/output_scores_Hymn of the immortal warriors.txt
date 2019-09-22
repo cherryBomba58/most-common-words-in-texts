@@ -1,0 +1,7 @@
+life,3
+Valhalla,2
+sword,2
+sky,2
+gate,2
+Odin,2
+Death,2

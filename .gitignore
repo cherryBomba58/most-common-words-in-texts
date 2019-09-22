@@ -2,6 +2,8 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/data/texts
-/MostCommonWordsFinder/bin/Development
-/MostCommonWordsFinder/obj/Development
+/data/texts/*
+!/data/texts/.gitkeep
+/MostCommonWordsFinder/bin/*
+/MostCommonWordsFinder/obj/*
+/.vs

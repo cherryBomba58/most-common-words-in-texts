@@ -1,0 +1,20 @@
+King,9
+Storm,3
+sword,3
+saddle,2
+hot blood,2
+beast,2
+wind,2
+Thunder,2
+god,2
+man,2
+Kings,2
+Earth,2
+Chariot drive,2
+Battle,2
+Kingdom,2
+demon,2
+Life,2
+right,2
+fear,2
+day,2

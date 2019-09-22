@@ -1,0 +1,5 @@
+steel,4
+home,3
+blood,3
+kingdom,2
+fight,2

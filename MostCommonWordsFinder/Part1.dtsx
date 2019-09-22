@@ -11,8 +11,8 @@
   DTS:LocaleID="1038"
   DTS:ObjectName="DataMining"
   DTS:PackageType="5"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{A0737F5C-1596-473E-A1E3-1F42B58DA83F}">
+  DTS:VersionBuild="47"
+  DTS:VersionGUID="{8320BD05-301C-4819-80C8-F47BA4A7148F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\SSIS\MostCommonWordsFinder\data\error.txt">
+          DTS:ConnectionString="E:\Homokozo\BI\MostCommonWords\data\error.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -38,7 +38,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Text"
-              DTS:DTSID="{BB9D5EE9-5D27-4A46-B56F-415D8C7E8CE6}"
+              DTS:DTSID="{1847B04F-41F3-4EDC-BE18-3696AB6622CA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -46,7 +46,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{CA9B5AB5-5F9B-4440-AB0E-C858634434E3}"
+              DTS:DTSID="{37A0AF08-DA86-41EE-A8E4-29DB432BBD48}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -54,7 +54,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{53D08B2A-F7F4-469E-9EDC-682A94864FE8}"
+              DTS:DTSID="{E5E97299-F5E5-43E1-BF1E-B25C152EA85B}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -73,7 +73,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\SSIS\MostCommonWordsFinder\data\output_scores_one_song.txt">
+          DTS:ConnectionString="E:\Homokozo\BI\MostCommonWords\data\output_scores_one_song.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -82,7 +82,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Term"
-              DTS:DTSID="{CC482096-F37D-414D-AC81-77CF3696607C}"
+              DTS:DTSID="{7B938CC6-82DB-4493-B0CC-35A07A3E8655}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -90,7 +90,7 @@
               DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Score"
-              DTS:DTSID="{C4D5E625-B75A-421A-8B67-37BA3E673EC3}"
+              DTS:DTSID="{842DF79D-4B46-49BE-9204-C9618622FA87}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -109,7 +109,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\SSIS\MostCommonWordsFinder\data\texts\Hand of Doom.txt">
+          DTS:ConnectionString="E:\Homokozo\BI\MostCommonWords\data\texts\Hand of Doom.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -118,7 +118,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Text"
-              DTS:DTSID="{80ABB0C3-1419-48C8-B87B-11AAD19B998C}"
+              DTS:DTSID="{EB22C5ED-4F94-490D-AAA2-0AEA9978C499}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -621,12 +621,16 @@
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="217,42"
-          Id="Package\Lyrics analyzing\Lyrics file source"
-          TopLeft="178.5,44.4999999999999" />
-        <NodeLayout
-          Size="217,42"
           Id="Package\Lyrics analyzing\Term extraction"
           TopLeft="177.5,219.166666666667" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\Lyrics analyzing\Filter chorus and liedtext out"
+          TopLeft="178,131.833333333333" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\Lyrics analyzing\Lyrics file source"
+          TopLeft="178.5,44.4999999999999" />
         <NodeLayout
           Size="217,42"
           Id="Package\Lyrics analyzing\Lyrics scores file destination"
@@ -635,10 +639,6 @@
           Size="216,42"
           Id="Package\Lyrics analyzing\Error file destination"
           TopLeft="565.5,222.5" />
-        <NodeLayout
-          Size="217,42"
-          Id="Package\Lyrics analyzing\Filter chorus and liedtext out"
-          TopLeft="178,131.833333333333" />
         <EdgeLayout
           Id="Package\Lyrics analyzing.Paths[Text]"
           TopLeft="286.25,173.833333333333">

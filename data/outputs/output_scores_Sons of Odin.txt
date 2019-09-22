@@ -1,0 +1,24 @@
+battle,5
+War,5
+son,5
+sword,5
+wind,4
+heart,4
+blood,4
+Hail Gods,4
+name,4
+man,3
+door,3
+thunder,3
+Odin,3
+fallen brother,3
+soul,3
+killer,3
+warriors friend,3
+Sworn,3
+today,3
+fame,3
+steel,3
+glory,3
+Open Valhalla,3
+day,3

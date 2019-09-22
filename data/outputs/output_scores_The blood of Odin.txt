@@ -1,0 +1,6 @@
+day,3
+rune,3
+earth,3
+world,2
+world tree,2
+spear,2

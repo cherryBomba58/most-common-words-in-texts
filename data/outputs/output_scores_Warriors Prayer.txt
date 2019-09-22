@@ -1,0 +1,19 @@
+army,4
+death,4
+HAIL,3
+wind,3
+day,3
+soldier,2
+rider,2
+world,2
+victory,2
+blood,2
+war,2
+real story,2
+forest,2
+sound,2
+story,2
+hill,2
+grandfather,2
+sword,2
+man,2

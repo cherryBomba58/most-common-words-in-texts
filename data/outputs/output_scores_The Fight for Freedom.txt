@@ -1,0 +1,6 @@
+sea,4
+Freedom,3
+side,2
+time,2
+sound,2
+fight,2

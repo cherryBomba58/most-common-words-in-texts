@@ -1,0 +1,8 @@
+warrior,7
+world,4
+brother,3
+air,2
+hand,2
+steel,2
+thunder,2
+stand,2

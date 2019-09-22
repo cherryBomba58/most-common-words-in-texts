@@ -1,0 +1,856 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/12/2019 8:35:23 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-GLKK0P8"
+  DTS:CreatorName="DESKTOP-GLKK0P8\Adri"
+  DTS:DTSID="{131DB707-FFE0-42CD-AD5B-C4C7FC072AE6}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
+  DTS:LocaleID="1038"
+  DTS:ObjectName="Part2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="62"
+  DTS:VersionGUID="{E9904EEC-5135-4819-850A-ADF66377300C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Error file manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4B0B3EFA-C11B-4CD7-99FC-AAF8D9FD5463}"
+      DTS:ObjectName="Error file manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="E:\Homokozo\BI\MostCommonWords\data\error.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Text"
+              DTS:DTSID="{3ACAE636-1015-4B88-9F3C-05EF654999D9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{033D6533-3ACB-44EE-9B5F-2673CA6911A4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{3B564563-AD48-4479-AE93-D0101FC379C9}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Lyrics scores files manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{8FF2DFE8-B458-4DE5-83F7-6FC3DB5D68EB}"
+      DTS:ObjectName="Lyrics scores files manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::outputFileName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="128"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Term"
+              DTS:DTSID="{7689DE04-7BE2-458D-A9C2-22B674AB3933}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Score"
+              DTS:DTSID="{2CD9894D-9382-4DEE-AAE8-61BDD62349D1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Source files manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{A407F8A7-0F83-4367-8BD0-1BE63F3D80A5}"
+      DTS:ObjectName="Source files manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::varFileName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Text"
+              DTS:DTSID="{9B8BB0A6-2CD5-43F0-80AF-E7587E165070}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5C6FB5E5-C55E-4530-A5C2-2C5D9A0299F6}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="outputFileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{50F3B358-C285-4651-B608-97E0B26B01C0}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varFileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach for files in folder"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{58BFAD0F-F3D0-4C5B-91E4-26544FADD2A7}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach for files in folder">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{6EF1FBF7-0A67-438B-8592-3F8A69B55295}"
+        DTS:ObjectName="{6EF1FBF7-0A67-438B-8592-3F8A69B55295}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="E:\Homokozo\BI\MostCommonWords\data\texts" />
+            <FEFEProperty
+              FileSpec="*.txt" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach for files in folder\Lyrics analyzing"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{22C7547C-2994-4DB7-A132-4DC67419CF55}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Lyrics analyzing"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach for files in folder\Lyrics analyzing\Error file destination"
+                  componentClassID="Microsoft.FlatFileDestination"
+                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Destination"
+                  localeId="1033"
+                  name="Error file destination">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether the data will overwrite or append to the destination file."
+                      name="Overwrite">true</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the text to write to the destination file before any data is written."
+                      expressionType="Notify"
+                      name="Header" />
+                    <property
+                      dataType="System.Boolean"
+                      description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                      name="EscapeQualifier">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach for files in folder\Lyrics analyzing\Error file destination.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Error file manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Error file manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach for files in folder\Lyrics analyzing\Error file destination.Inputs[Flat File Destination Input]"
+                      hasSideEffects="true"
+                      name="Flat File Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Error file destination.Inputs[Flat File Destination Input].Columns[Text]"
+                          cachedDataType="wstr"
+                          cachedLength="908"
+                          cachedName="Text"
+                          externalMetadataColumnId="Package\Foreach for files in folder\Lyrics analyzing\Error file destination.Inputs[Flat File Destination Input].ExternalColumns[Text]"
+                          lineageId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Outputs[Flat File Source Output].Columns[Text]" />
+                        <inputColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Error file destination.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                          cachedDataType="i4"
+                          cachedName="ErrorCode"
+                          externalMetadataColumnId="Package\Foreach for files in folder\Lyrics analyzing\Error file destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                          lineageId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Outputs[Term Extraction Error Output].Columns[ErrorCode]" />
+                        <inputColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Error file destination.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                          cachedDataType="i4"
+                          cachedName="ErrorColumn"
+                          externalMetadataColumnId="Package\Foreach for files in folder\Lyrics analyzing\Error file destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                          lineageId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Outputs[Term Extraction Error Output].Columns[ErrorColumn]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Error file destination.Inputs[Flat File Destination Input].ExternalColumns[Text]"
+                          dataType="wstr"
+                          length="100"
+                          name="Text" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Error file destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                          dataType="i4"
+                          name="ErrorCode" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Error file destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                          dataType="i4"
+                          name="ErrorColumn" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                </component>
+                <component
+                  refId="Package\Foreach for files in folder\Lyrics analyzing\Filter chorus and liedtext out"
+                  componentClassID="Microsoft.ConditionalSplit"
+                  contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+                  name="Filter chorus and liedtext out"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach for files in folder\Lyrics analyzing\Filter chorus and liedtext out.Inputs[Conditional Split Input]"
+                      description="Input to the Conditional Split Transformation"
+                      name="Conditional Split Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Filter chorus and liedtext out.Inputs[Conditional Split Input].Columns[Text]"
+                          cachedDataType="wstr"
+                          cachedLength="908"
+                          cachedName="Text"
+                          lineageId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Outputs[Flat File Source Output].Columns[Text]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach for files in folder\Lyrics analyzing\Filter chorus and liedtext out.Outputs[Text]"
+                      description="Output 1 of the Conditional Split Transformation"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      exclusionGroup="1"
+                      name="Text"
+                      synchronousInputId="Package\Foreach for files in folder\Lyrics analyzing\Filter chorus and liedtext out.Inputs[Conditional Split Input]"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                          name="Expression">([FINDSTRING](#{Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Outputs[Flat File Source Output].Columns[Text]},"chorus",1) == 0) &amp;&amp; ([FINDSTRING](#{Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Outputs[Flat File Source Output].Columns[Text]},"Chorus",1) == 0) &amp;&amp; ([FINDSTRING](#{Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Outputs[Flat File Source Output].Columns[Text]},"Liedtext",1) == 0)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the friendly version of the expression. This expression version uses column names."
+                          expressionType="Notify"
+                          name="FriendlyExpression">(FINDSTRING(Text,"chorus",1) == 0) &amp;&amp; (FINDSTRING(Text,"Chorus",1) == 0) &amp;&amp; (FINDSTRING(Text,"Liedtext",1) == 0)</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                          name="EvaluationOrder">0</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach for files in folder\Lyrics analyzing\Filter chorus and liedtext out.Outputs[Chorus and liedtext]"
+                      description="Default Output of the Conditional Split Transformation"
+                      exclusionGroup="1"
+                      name="Chorus and liedtext"
+                      synchronousInputId="Package\Foreach for files in folder\Lyrics analyzing\Filter chorus and liedtext out.Inputs[Conditional Split Input]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsDefaultOut">true</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach for files in folder\Lyrics analyzing\Filter chorus and liedtext out.Outputs[Conditional Split Error Output]"
+                      description="Error Output of the Conditional Split Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Conditional Split Error Output"
+                      synchronousInputId="Package\Foreach for files in folder\Lyrics analyzing\Filter chorus and liedtext out.Inputs[Conditional Split Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Filter chorus and liedtext out.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach for files in folder\Lyrics analyzing\Filter chorus and liedtext out.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Filter chorus and liedtext out.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach for files in folder\Lyrics analyzing\Filter chorus and liedtext out.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Lyrics file source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Source files manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Source files manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Outputs[Flat File Source Output].Columns[Text]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Outputs[Flat File Source Output].ExternalColumns[Text]"
+                          length="908"
+                          lineageId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Outputs[Flat File Source Output].Columns[Text]"
+                          name="Text"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Outputs[Flat File Source Output].ExternalColumns[Text]"
+                          dataType="wstr"
+                          length="100"
+                          name="Text" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1250"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics scores file destination"
+                  componentClassID="Microsoft.FlatFileDestination"
+                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Destination"
+                  localeId="1033"
+                  name="Lyrics scores file destination">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether the data will overwrite or append to the destination file."
+                      name="Overwrite">true</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the text to write to the destination file before any data is written."
+                      expressionType="Notify"
+                      name="Header" />
+                    <property
+                      dataType="System.Boolean"
+                      description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                      name="EscapeQualifier">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics scores file destination.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Lyrics scores files manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Lyrics scores files manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics scores file destination.Inputs[Flat File Destination Input]"
+                      hasSideEffects="true"
+                      name="Flat File Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics scores file destination.Inputs[Flat File Destination Input].Columns[Term]"
+                          cachedDataType="wstr"
+                          cachedLength="128"
+                          cachedName="Term"
+                          externalMetadataColumnId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics scores file destination.Inputs[Flat File Destination Input].ExternalColumns[Term]"
+                          lineageId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Outputs[Term Extraction Output].Columns[Term]" />
+                        <inputColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics scores file destination.Inputs[Flat File Destination Input].Columns[Score]"
+                          cachedDataType="r8"
+                          cachedName="Score"
+                          externalMetadataColumnId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics scores file destination.Inputs[Flat File Destination Input].ExternalColumns[Score]"
+                          lineageId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Outputs[Term Extraction Output].Columns[Score]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics scores file destination.Inputs[Flat File Destination Input].ExternalColumns[Term]"
+                          dataType="wstr"
+                          length="128"
+                          name="Term" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics scores file destination.Inputs[Flat File Destination Input].ExternalColumns[Score]"
+                          dataType="r8"
+                          name="Score" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                </component>
+                <component
+                  refId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction"
+                  componentClassID="Microsoft.TermExtraction"
+                  description="Extracts frequently used English-only terms from an input data flow. Terms and their corresponding score are written to output data columns. For example, search a group of documents to discover commonly-used terms. Note: an English dictionary is included with Integration Services."
+                  name="Term extraction"
+                  usesDispositions="true"
+                  version="3">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether to use exclusion terms."
+                      name="NeedReferenceData">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the reference table containing the exclusion terms."
+                      name="OutTermTable"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the column containing the exclusion terms. The column must be in the table specified in the property OutTermTable."
+                      name="OutTermColumn"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of terms to extract. 0 specifies noun, 1 specifies noun phrase, and 2 specifies noun and noun phrase."
+                      name="WordOrPhrase"
+                      typeConverter="WordOrPhrase">2</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies what kind of score to be associated with a term. 0 means using the frequency of a term as the score; 1 means using the TFIDF of a term as the score."
+                      name="ScoreType"
+                      typeConverter="ScoreType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the frequency threshold above which a term is extracted."
+                      name="FrequencyThreshold">2</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the maximum number of words in a term."
+                      name="MaxLengthOfTerm">12</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether the Term Extraction process is case sensitive."
+                      name="IsCaseSensitive">false</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Inputs[Term Extraction Input]"
+                      description="Input to Term Extraction Transformation"
+                      name="Term Extraction Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Inputs[Term Extraction Input].Columns[Text]"
+                          cachedDataType="wstr"
+                          cachedLength="908"
+                          cachedName="Text"
+                          lineageId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Outputs[Flat File Source Output].Columns[Text]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Outputs[Term Extraction Output]"
+                      description="Output from Term Extraction Transformation"
+                      errorOrTruncationOperation="Term Extraction"
+                      errorRowDisposition="RedirectRow"
+                      name="Term Extraction Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Outputs[Term Extraction Output].Columns[Term]"
+                          dataType="wstr"
+                          description="Output Column from Term Extraction Transform"
+                          length="128"
+                          lineageId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Outputs[Term Extraction Output].Columns[Term]"
+                          name="Term" />
+                        <outputColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Outputs[Term Extraction Output].Columns[Score]"
+                          dataType="r8"
+                          description="Score"
+                          lineageId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Outputs[Term Extraction Output].Columns[Score]"
+                          name="Score" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Outputs[Term Extraction Error Output]"
+                      description="Error Output from Term Extraction Transform"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Term Extraction Error Output"
+                      synchronousInputId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Inputs[Term Extraction Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Outputs[Term Extraction Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Outputs[Term Extraction Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Outputs[Term Extraction Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Outputs[Term Extraction Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach for files in folder\Lyrics analyzing.Paths[Flat File Source Output]"
+                  endId="Package\Foreach for files in folder\Lyrics analyzing\Filter chorus and liedtext out.Inputs[Conditional Split Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Foreach for files in folder\Lyrics analyzing.Paths[Term Extraction Error Output]"
+                  endId="Package\Foreach for files in folder\Lyrics analyzing\Error file destination.Inputs[Flat File Destination Input]"
+                  name="Term Extraction Error Output"
+                  startId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Outputs[Term Extraction Error Output]" />
+                <path
+                  refId="Package\Foreach for files in folder\Lyrics analyzing.Paths[Term Extraction Output]"
+                  endId="Package\Foreach for files in folder\Lyrics analyzing\Lyrics scores file destination.Inputs[Flat File Destination Input]"
+                  name="Term Extraction Output"
+                  startId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Outputs[Term Extraction Output]" />
+                <path
+                  refId="Package\Foreach for files in folder\Lyrics analyzing.Paths[Text]"
+                  endId="Package\Foreach for files in folder\Lyrics analyzing\Term extraction.Inputs[Term Extraction Input]"
+                  name="Text"
+                  startId="Package\Foreach for files in folder\Lyrics analyzing\Filter chorus and liedtext out.Outputs[Text]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach for files in folder\Output filename variable"
+          DTS:CreationName="Microsoft.ExpressionTask"
+          DTS:Description="Expression Task"
+          DTS:DTSID="{EBFAC97E-7182-4685-96B3-6E1181F98E2B}"
+          DTS:ExecutableType="Microsoft.ExpressionTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Output filename variable"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExpressionTask
+              Expression="@[User::outputFileName]=&quot;E:\\Homokozo\\BI\\MostCommonWords\\data\\outputs\\output_scores_&quot;&#xA;+SUBSTRING( @[User::varFileName], FINDSTRING( &quot;E:\\Homokozo\\BI\\MostCommonWords\\data\\texts\\&quot;, &quot;\\&quot;, 6)+1, 50)" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach for files in folder.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{CBE55815-DE6E-4C01-9816-0B8825D636CC}"
+          DTS:From="Package\Foreach for files in folder\Output filename variable"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Foreach for files in folder\Lyrics analyzing" />
+      </DTS:PrecedenceConstraints>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{821D1F9E-EA8A-4D5E-B348-D3D31A2B5BB8}"
+          DTS:ObjectName="{821D1F9E-EA8A-4D5E-B348-D3D31A2B5BB8}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::varFileName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="198,42"
+          Id="Package\Foreach for files in folder\Lyrics analyzing"
+          TopLeft="20.75,93" />
+        <NodeLayout
+          Size="198,42"
+          Id="Package\Foreach for files in folder\Output filename variable"
+          TopLeft="21,18" />
+        <EdgeLayout
+          Id="Package\Foreach for files in folder.PrecedenceConstraints[Constraint]"
+          TopLeft="119.875,60">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33"
+              Start="0,0"
+              End="0,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="234,162"
+          Size="234,205"
+          Id="Package\Foreach for files in folder"
+          TopLeft="79,70" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Foreach for files in folder\Lyrics analyzing">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="217,42"
+          Id="Package\Foreach for files in folder\Lyrics analyzing\Term extraction"
+          TopLeft="177.5,219.166666666667" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\Foreach for files in folder\Lyrics analyzing\Filter chorus and liedtext out"
+          TopLeft="178,131.833333333333" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\Foreach for files in folder\Lyrics analyzing\Lyrics file source"
+          TopLeft="178.5,44.4999999999999" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\Foreach for files in folder\Lyrics analyzing\Lyrics scores file destination"
+          TopLeft="178.5,306.5" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\Foreach for files in folder\Lyrics analyzing\Error file destination"
+          TopLeft="565.5,222.5" />
+        <EdgeLayout
+          Id="Package\Foreach for files in folder\Lyrics analyzing.Paths[Text]"
+          TopLeft="286.25,173.833333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.3333333333334"
+              Start="0,0"
+              End="0,37.8333333333334">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.8333333333334" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-10.69248046875,14.2179361979167,21.3849609375,9.3974609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach for files in folder\Lyrics analyzing.Paths[Term Extraction Output]"
+          TopLeft="286.5,261.166666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.3333333333334"
+              Start="0,0"
+              End="0,37.8333333333334">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.8333333333334" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach for files in folder\Lyrics analyzing.Paths[Term Extraction Error Output]"
+          TopLeft="394.5,241.833333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="171,0"
+              Start="0,0"
+              End="163.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="163.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="16.36251953125,5,130.7749609375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach for files in folder\Lyrics analyzing.Paths[Flat File Source Output]"
+          TopLeft="286.75,86.4999999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.3333333333334"
+              Start="0,0"
+              End="0,37.8333333333334">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.8333333333334" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

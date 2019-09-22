@@ -1,0 +1,8 @@
+hail,3
+god,3
+war,2
+time,2
+strength,2
+ground,2
+side,2
+man,2

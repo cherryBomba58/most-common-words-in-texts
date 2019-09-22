@@ -1,0 +1,5 @@
+thy friend,4
+heart,4
+call,4
+end,4
+strength,2

@@ -1,0 +1,3 @@
+side,2
+Asgard,2
+Ye,2

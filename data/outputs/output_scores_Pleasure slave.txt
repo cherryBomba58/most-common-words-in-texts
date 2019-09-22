@@ -1,0 +1,4 @@
+woman,11
+slave,10
+greatest gift,3
+reason,3

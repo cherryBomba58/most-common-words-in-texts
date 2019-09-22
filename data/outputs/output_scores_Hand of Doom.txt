@@ -1,0 +1,9 @@
+hand,4
+wind,2
+hammer,2
+limb,2
+death,2
+body,2
+blood,2
+time,2
+Doom,2

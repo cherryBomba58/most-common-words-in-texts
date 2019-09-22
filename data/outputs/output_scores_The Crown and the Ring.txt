@@ -1,0 +1,12 @@
+ring,4
+kingdom,4
+crown,4
+fire,3
+providence,3
+pride,3
+whirlwind,3
+blood,3
+king,3
+steel,2
+ray,2
+battle,2

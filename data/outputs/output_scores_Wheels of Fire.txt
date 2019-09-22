@@ -1,0 +1,10 @@
+wheel,15
+fire,11
+spirit,5
+ride,5
+burning,5
+sky,4
+night,4
+blood,2
+tire,2
+road,2

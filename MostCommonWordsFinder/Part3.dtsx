@@ -11,8 +11,8 @@
   DTS:LocaleID="1038"
   DTS:ObjectName="Part3"
   DTS:PackageType="5"
-  DTS:VersionBuild="35"
-  DTS:VersionGUID="{F1EDCB1D-D035-4668-B75F-D7587E257B4E}">
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{C7C69914-2C56-4126-8147-EEE227C0780B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\SSIS\MostCommonWordsFinder\data\input_text.txt">
+          DTS:ConnectionString="E:\Homokozo\BI\MostCommonWords\data\input_text.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Text"
-              DTS:DTSID="{1CFC0EE5-074E-4572-99AF-329B61DF15EA}"
+              DTS:DTSID="{D4599C12-514D-4600-BB33-EE21FD4D2408}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -58,7 +58,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\SSIS\MostCommonWordsFinder\data\output_scores.txt">
+          DTS:ConnectionString="E:\Homokozo\BI\MostCommonWords\data\output_scores.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -67,7 +67,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Term"
-              DTS:DTSID="{5AA775E9-AE43-4949-A17B-11F567089B3F}"
+              DTS:DTSID="{8DD7E621-F4C8-4481-93F9-E5171B4F8BB9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Score"
-              DTS:DTSID="{481B0EA2-768A-4B63-AB5F-E71E11C54071}"
+              DTS:DTSID="{DF406C70-0667-4932-AF04-89E5D35F0E83}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -94,7 +94,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="D:\SSIS\MostCommonWordsFinder\data\error.txt">
+          DTS:ConnectionString="E:\Homokozo\BI\MostCommonWords\data\error.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -103,7 +103,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Text"
-              DTS:DTSID="{E23AD648-E2DE-4708-A1B4-7EA270992CD9}"
+              DTS:DTSID="{29BA45D4-8B5F-4F31-A5CD-2FE391F66D66}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -111,7 +111,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{1C4DA191-0A9E-4C3F-AFB8-6AAAAAE9D446}"
+              DTS:DTSID="{4AE5F2B7-0279-4536-A848-D19776C665DA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -119,7 +119,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{14ADF593-4E79-4221-BA72-57DD83259AB6}"
+              DTS:DTSID="{03453271-B3C0-47C3-9D70-115361FAE19A}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -199,7 +199,7 @@
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="D:\SSIS\MostCommonWordsFinder\data\texts" />
+              Folder="E:\Homokozo\BI\MostCommonWords\data\texts" />
             <FEFEProperty
               FileSpec="*.txt" />
             <FEFEProperty
@@ -385,8 +385,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{C88F33AE-EC31-495A-B5AD-41CC68CADDE2}"
-          DTS:ObjectName="{C88F33AE-EC31-495A-B5AD-41CC68CADDE2}"
+          DTS:DTSID="{B995CADA-DED2-4D53-A3E4-746517D32131}"
+          DTS:ObjectName="{B995CADA-DED2-4D53-A3E4-746517D32131}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::varFileName" />
       </DTS:ForEachVariableMappings>
@@ -890,23 +890,27 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="195,42"
+          Id="Package\Delete common input file"
+          TopLeft="101,350" />
+        <NodeLayout
           Size="132,42"
           Id="Package\Foreach for files in folder\File reader"
           TopLeft="25.5,20.5" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="192,87"
-          Size="192,130"
+          PanelSize="195,87"
+          Size="195,130"
           Id="Package\Foreach for files in folder"
           TopLeft="106.5,62" />
         <NodeLayout
-          Size="192,42"
+          Size="195,42"
           Id="Package\Lyrics analyzing"
           TopLeft="106.5,248" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="202.5,192">
+          TopLeft="204,192">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -926,13 +930,9 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="200,42"
-          Id="Package\Delete common input file"
-          TopLeft="101,350" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="201.75,290">
+          TopLeft="201.25,290">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1000,8 +1000,12 @@
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="217,42"
-          Id="Package\Lyrics analyzing\Error file destination"
-          TopLeft="602,200" />
+          Id="Package\Lyrics analyzing\Term extraction"
+          TopLeft="228,199.666666666667" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\Lyrics analyzing\Filter chorus and liedtext out"
+          TopLeft="228,112.333333333333" />
         <NodeLayout
           Size="217,42"
           Id="Package\Lyrics analyzing\Lyrics input file source"
@@ -1012,29 +1016,29 @@
           TopLeft="228,287" />
         <NodeLayout
           Size="217,42"
-          Id="Package\Lyrics analyzing\Term extraction"
-          TopLeft="228,199.666666666667" />
+          Id="Package\Lyrics analyzing\Error file destination"
+          TopLeft="602,200" />
         <EdgeLayout
-          Id="Package\Lyrics analyzing.Paths[Term Extraction Error Output]"
-          TopLeft="445,220.833333333333">
+          Id="Package\Lyrics analyzing.Paths[Text]"
+          TopLeft="336.5,154.333333333333">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="157,0"
+              EndConnector="0,45.3333333333333"
               Start="0,0"
-              End="149.5,0">
+              End="0,37.8333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="149.5,0" />
+                    End="0,37.8333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="9.36251953125011,5,130.7749609375,11.43359375"
+              BoundingBox="-10.69248046875,14.2179361979167,21.3849609375,9.3974609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1060,10 +1064,30 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="217,42"
-          Id="Package\Lyrics analyzing\Filter chorus and liedtext out"
-          TopLeft="228,112.333333333333" />
+        <EdgeLayout
+          Id="Package\Lyrics analyzing.Paths[Term Extraction Error Output]"
+          TopLeft="445,220.833333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="157,0"
+              Start="0,0"
+              End="149.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="149.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="9.36251953125011,5,130.7749609375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Lyrics analyzing.Paths[Flat File Source Output]"
           TopLeft="336.5,67">
@@ -1084,30 +1108,6 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Lyrics analyzing.Paths[Text]"
-          TopLeft="336.5,154.333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,45.3333333333333"
-              Start="0,0"
-              End="0,37.8333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.8333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-10.69248046875,14.2179361979167,21.3849609375,9.3974609375"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

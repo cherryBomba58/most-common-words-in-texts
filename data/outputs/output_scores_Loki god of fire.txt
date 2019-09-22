@@ -1,0 +1,15 @@
+god,11
+fire,9
+sky,8
+brother,5
+world,4
+man,3
+giant,3
+hell,2
+shape,2
+serpent,2
+sea,2
+ruler,2
+father,2
+wolf,2
+friend,2
