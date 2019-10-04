@@ -11,8 +11,8 @@
   DTS:LocaleID="1038"
   DTS:ObjectName="Part4"
   DTS:PackageType="5"
-  DTS:VersionBuild="46"
-  DTS:VersionGUID="{63E5CD3D-140B-431B-9C08-BBE7E77BA497}">
+  DTS:VersionBuild="55"
+  DTS:VersionGUID="{9744A56D-5C5E-486A-B08D-91D80A0BC7B0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -22,6 +22,8 @@
       DTS:Description="xt"
       DTS:DTSID="{152203BC-E44D-4775-9622-CFA0E8A8F0BC}"
       DTS:ObjectName="Common input file manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::PathToData] + "input_text.txt"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -39,7 +41,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Text"
-              DTS:DTSID="{79DE3760-A8E7-480E-B487-78FC6D7831A9}"
+              DTS:DTSID="{DC813371-C790-4F0B-A2A1-730DE4815A38}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -50,6 +52,8 @@
       DTS:CreationName="EXCEL"
       DTS:DTSID="{8811279F-92DA-4565-B87F-FBA7EE0F12AF}"
       DTS:ObjectName="Destination Excel manager">
+      <DTS:PropertyExpression
+        DTS:Name="ExcelFilePath">@[$Project::PathToData] + "output_scores.xlsx"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=D:\SSIS\most-common-words\data\output_scores.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
@@ -60,6 +64,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{C249CFDB-1664-467B-B077-0719C6803D27}"
       DTS:ObjectName="Error file manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::PathToData] + "error.txt"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -77,7 +83,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Text"
-              DTS:DTSID="{1B3A5C65-899C-4926-861D-E8CB1C325F1C}"
+              DTS:DTSID="{DC5E6AC2-BB34-4458-8E77-E27A65DDA070}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -85,7 +91,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{7A88F855-E419-4E35-B2E8-7EB895B27B8C}"
+              DTS:DTSID="{0471374C-DEEB-4AEE-8AF3-C94D22FB60F7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -93,7 +99,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{5B33DD42-9A84-470A-B5E2-B2A6BAA3FB00}"
+              DTS:DTSID="{B6FBE53D-28F7-42E2-8129-6A3EFB998BEE}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -170,10 +176,14 @@
         DTS:CreationName="Microsoft.ForEachFileEnumerator"
         DTS:DTSID="{37D0B219-80E0-4B36-ADD1-CE258C68F9F3}"
         DTS:ObjectName="{37D0B219-80E0-4B36-ADD1-CE258C68F9F3}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[$Project::PathToData] + "texts\\"</DTS:PropertyExpression>
+        <DTS:PropertyExpression
+          DTS:Name="FileSpec">"*.txt"</DTS:PropertyExpression>
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="D:\SSIS\most-common-words\data\texts" />
+              Folder="D:\SSIS\most-common-words\data\texts\" />
             <FEFEProperty
               FileSpec="*.txt" />
             <FEFEProperty
@@ -359,8 +369,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{880D4A8F-B390-4567-AFA7-CDD4413BCF77}"
-          DTS:ObjectName="{880D4A8F-B390-4567-AFA7-CDD4413BCF77}"
+          DTS:DTSID="{36334050-2636-4B02-B107-5B1A4A5692EB}"
+          DTS:ObjectName="{36334050-2636-4B02-B107-5B1A4A5692EB}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::varFileName" />
       </DTS:ForEachVariableMappings>
@@ -1027,10 +1037,6 @@
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="229,42"
-          Id="Package\Lyrics analyzing\Term extraction"
-          TopLeft="226,199.666666666667" />
-        <NodeLayout
-          Size="229,42"
           Id="Package\Lyrics analyzing\Filter chorus and liedtext out"
           TopLeft="226,112.333333333333" />
         <NodeLayout
@@ -1039,32 +1045,16 @@
           TopLeft="226,25" />
         <NodeLayout
           Size="229,42"
+          Id="Package\Lyrics analyzing\Term extraction"
+          TopLeft="226,199.666666666667" />
+        <NodeLayout
+          Size="229,42"
+          Id="Package\Lyrics analyzing\Lyrics scores Excel destination"
+          TopLeft="226,293" />
+        <NodeLayout
+          Size="229,42"
           Id="Package\Lyrics analyzing\Error file destination"
           TopLeft="602,200" />
-        <EdgeLayout
-          Id="Package\Lyrics analyzing.Paths[Text]"
-          TopLeft="340.5,154.333333333333">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,45.333333333334"
-              Start="0,0"
-              End="0,37.833333333334">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.833333333334" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-10.69248046875,14.217936197917,21.3849609375,9.3974609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Lyrics analyzing.Paths[Term Extraction Error Output]"
           TopLeft="455,220.833333333333">
@@ -1111,10 +1101,30 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="229,42"
-          Id="Package\Lyrics analyzing\Lyrics scores Excel destination"
-          TopLeft="226,293" />
+        <EdgeLayout
+          Id="Package\Lyrics analyzing.Paths[Text]"
+          TopLeft="340.5,154.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.333333333334"
+              Start="0,0"
+              End="0,37.833333333334">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.833333333334" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-10.69248046875,14.217936197917,21.3849609375,9.3974609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Lyrics analyzing.Paths[Term Extraction Output]"
           TopLeft="340.5,241.666666666667">

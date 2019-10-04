@@ -11,8 +11,8 @@
   DTS:LocaleID="1038"
   DTS:ObjectName="Part2"
   DTS:PackageType="5"
-  DTS:VersionBuild="64"
-  DTS:VersionGUID="{EFD29E53-8E60-475D-969D-F3B0EA080403}">
+  DTS:VersionBuild="70"
+  DTS:VersionGUID="{2F9EC5C4-E5E8-4841-B203-183B3AF99D8A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -21,6 +21,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{4B0B3EFA-C11B-4CD7-99FC-AAF8D9FD5463}"
       DTS:ObjectName="Error file manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::PathToData] + "error.txt"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -162,10 +164,14 @@
         DTS:CreationName="Microsoft.ForEachFileEnumerator"
         DTS:DTSID="{6EF1FBF7-0A67-438B-8592-3F8A69B55295}"
         DTS:ObjectName="{6EF1FBF7-0A67-438B-8592-3F8A69B55295}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[$Project::PathToData] + "texts\\"</DTS:PropertyExpression>
+        <DTS:PropertyExpression
+          DTS:Name="FileSpec">"*.txt"</DTS:PropertyExpression>
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="D:\SSIS\most-common-words\data\texts" />
+              Folder="D:\SSIS\most-common-words\data\texts\" />
             <FEFEProperty
               FileSpec="*.txt" />
             <FEFEProperty
@@ -656,7 +662,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <ExpressionTask
-              Expression="@[User::outputFileName]=&quot;D:\\SSIS\\most-common-words\\data\\outputs\\output_scores_&quot;&#xA;+SUBSTRING( @[User::varFileName], FINDSTRING( &quot;D:\\SSIS\\most-common-words\\data\\texts\\&quot;, &quot;\\&quot;, 5)+1, 50)" />
+              Expression="@[User::outputFileName]= @[$Project::PathToData] + &quot;outputs\\output_scores_&quot;&#xA;+SUBSTRING( @[User::varFileName], LEN(@[$Project::PathToData] + &quot;texts\\&quot;)+1, 50)" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -673,8 +679,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{11A8C4AD-710E-48D3-85C0-24406F24A3FB}"
-          DTS:ObjectName="{11A8C4AD-710E-48D3-85C0-24406F24A3FB}"
+          DTS:DTSID="{52336E02-19D9-4F69-A79D-B00B90A55F9B}"
+          DTS:ObjectName="{52336E02-19D9-4F69-A79D-B00B90A55F9B}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::varFileName" />
       </DTS:ForEachVariableMappings>

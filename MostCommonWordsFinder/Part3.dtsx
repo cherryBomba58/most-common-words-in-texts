@@ -11,8 +11,8 @@
   DTS:LocaleID="1038"
   DTS:ObjectName="Part3"
   DTS:PackageType="5"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{06A8AB5C-AE77-44CA-A193-BF6AC5209CC1}">
+  DTS:VersionBuild="48"
+  DTS:VersionGUID="{CAF1DD9A-CE52-4B55-9CA6-08E12E0062A7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -22,6 +22,8 @@
       DTS:Description="xt"
       DTS:DTSID="{B7F95C4B-F9C7-477B-B219-D30B3205A830}"
       DTS:ObjectName="Common input file manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::PathToData] + "input_text.txt"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -39,7 +41,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Text"
-              DTS:DTSID="{AFB9632E-B0EC-462B-95E7-0ED5FD828DAF}"
+              DTS:DTSID="{ED73401A-D914-4FD5-B194-6F8F43AE2D75}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -50,6 +52,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{F115CEFA-C04C-4E9E-8161-6482B2D32E7B}"
       DTS:ObjectName="Destination file manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::PathToData] + "output_scores.txt"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -67,7 +71,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Term"
-              DTS:DTSID="{20B7785F-1075-448F-8993-2984A8484566}"
+              DTS:DTSID="{0F5DBBAA-BCEF-4FB9-AA6E-AB6618781C22}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +79,7 @@
               DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Score"
-              DTS:DTSID="{556225CA-5F3D-42F3-9EDB-F2052A3CC936}"
+              DTS:DTSID="{E929D369-C507-4D9F-8755-A4FC20AC3C8D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -86,6 +90,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{CB9FA929-E781-4AA2-B208-563ACE4DD910}"
       DTS:ObjectName="Error file manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::PathToData] + "error.txt"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -196,10 +202,14 @@
         DTS:CreationName="Microsoft.ForEachFileEnumerator"
         DTS:DTSID="{FDAD8B8A-DE69-4797-99DD-5CD2F9AD5EE1}"
         DTS:ObjectName="{FDAD8B8A-DE69-4797-99DD-5CD2F9AD5EE1}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[$Project::PathToData] + "texts\\"</DTS:PropertyExpression>
+        <DTS:PropertyExpression
+          DTS:Name="FileSpec">"*.txt"</DTS:PropertyExpression>
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="D:\SSIS\most-common-words\data\texts" />
+              Folder="D:\SSIS\most-common-words\data\texts\" />
             <FEFEProperty
               FileSpec="*.txt" />
             <FEFEProperty
@@ -385,8 +395,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{7C08398C-4CDC-4155-A999-4182B2DB7BC6}"
-          DTS:ObjectName="{7C08398C-4CDC-4155-A999-4182B2DB7BC6}"
+          DTS:DTSID="{C6181AA4-29E4-48B3-9CE7-B336C6F79EE8}"
+          DTS:ObjectName="{C6181AA4-29E4-48B3-9CE7-B336C6F79EE8}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::varFileName" />
       </DTS:ForEachVariableMappings>

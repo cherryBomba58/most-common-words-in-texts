@@ -11,8 +11,8 @@
   DTS:LocaleID="1038"
   DTS:ObjectName="DataMining"
   DTS:PackageType="5"
-  DTS:VersionBuild="51"
-  DTS:VersionGUID="{24E60487-1834-42A2-95F0-362CCEFD8926}">
+  DTS:VersionBuild="52"
+  DTS:VersionGUID="{D7B84E5F-2154-4845-A1A5-6DA9DBCE14C7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -21,6 +21,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{29CE00A4-02BB-4F93-8A75-D7CF4F3F5716}"
       DTS:ObjectName="Error file manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::PathToData] + "error.txt"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -65,6 +67,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{83AE8F06-D3A4-4312-8B51-5EE5CF3FF99E}"
       DTS:ObjectName="One lyrics scores file manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::PathToData] + "output_scores_one_song.txt"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -101,6 +105,8 @@
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{A6B729F3-5F1D-495A-A5A0-0D3A6F0A1541}"
       DTS:ObjectName="One source file manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::PathToData] + "texts\\Hand of Doom.txt"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
