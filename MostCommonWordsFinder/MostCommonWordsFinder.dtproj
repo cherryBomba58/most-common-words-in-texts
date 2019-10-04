@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-PN55P98</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdRqPb4Rm5EyNci4RLTWatgAAAAACAAAAAAAQZgAAAAEAACAAAAAoBSxOxNj+bYHT0Q5aykIaRIKJ6EjoIGpHpZh9GDwYLQAAAAAOgAAAAAIAACAAAADJqyEsH6ToidS4rbtN4HIy4JCtorh2p9ztPmIpgyEt8ZAAAACRiAi242nE09qCUggSRVIY5N4CZxQCjXIWqOAagbcqjXffilWtiznC7PATCstYsEFnOfGazn1K68XCVqxu5eWA9NhneTcoA/qDv57IZSqd02DZyhUtsZUYKbyq3Dxvslf40DA5uty7kZmMI9USos9aEAtirXGSy4yfm+CPSFbou/63cwfmVEY225n6Riatr35AAAAAfWxOT4tGhxKVAgh7MRS/fTIPyH+/lmMTej1du5x7E7qcU+Jv+4qq3VEaLrRAQk0L9rpwXZNxYwn8MKIVsLCSIA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjd8aeSJTWk2/nB++mXjragAAAAACAAAAAAADZgAAwAAAABAAAABQcsQJvwVSv/mpppfuuSnbAAAAAASAAACgAAAAEAAAACkVQWVO9GgqUwWPCpfHSBmIAAAAuDhWjreNsjwsOVKHyr5Ejnjd8BG9rNFKgxOf2GL5guag5x9WwLchqVpm0zLIOsmKpyvLxKb7OcI9rb7XErg/Up0DPysLyqckcp8mterWYSZ8IW9zU/trWlAdTc2yjF4NOYoLV0RSooMj46fLByaknGBBWqZnsRO44AtOto3bAd8aXfMbb/CxbhQAAABEZxkN5rylAWrBkVEve81CgGPRxA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -45,10 +45,10 @@
                 <SSIS:Property SSIS:Name="Name">DataMining</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">47</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">51</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{8320BD05-301C-4819-80C8-F47BA4A7148F}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{24E60487-1834-42A2-95F0-362CCEFD8926}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -126,7 +126,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">E:\Homokozo\BI\MostCommonWords\data\error.txt</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\SSIS\most-common-words\data\error.txt</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -323,7 +323,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">E:\Homokozo\BI\MostCommonWords\data\output_scores_one_song.txt</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\SSIS\most-common-words\data\output_scores_one_song.txt</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -520,7 +520,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">E:\Homokozo\BI\MostCommonWords\data\texts\Hand of Doom.txt</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\SSIS\most-common-words\data\texts\Hand of Doom.txt</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -654,10 +654,10 @@
                 <SSIS:Property SSIS:Name="Name">Part3</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">41</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">45</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{C7C69914-2C56-4126-8147-EEE227C0780B}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{06A8AB5C-AE77-44CA-A193-BF6AC5209CC1}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -735,7 +735,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">E:\Homokozo\BI\MostCommonWords\data\input_text.txt</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\SSIS\most-common-words\data\input_text.txt</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -932,7 +932,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">E:\Homokozo\BI\MostCommonWords\data\output_scores.txt</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\SSIS\most-common-words\data\output_scores.txt</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1129,7 +1129,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">E:\Homokozo\BI\MostCommonWords\data\error.txt</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\SSIS\most-common-words\data\error.txt</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1445,10 +1445,10 @@
                 <SSIS:Property SSIS:Name="Name">Part2</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">62</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">64</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{E9904EEC-5135-4819-850A-ADF66377300C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{EFD29E53-8E60-475D-969D-F3B0EA080403}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1526,7 +1526,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">E:\Homokozo\BI\MostCommonWords\data\error.txt</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\SSIS\most-common-words\data\error.txt</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2024,10 +2024,10 @@
                 <SSIS:Property SSIS:Name="Name">Part4</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">45</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">46</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{0D197119-8578-4E2D-8297-ED9E1E05AF43}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{63E5CD3D-140B-431B-9C08-BBE7E77BA497}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -2105,7 +2105,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">E:\Homokozo\BI\MostCommonWords\data\input_text.txt</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\SSIS\most-common-words\data\input_text.txt</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2242,7 +2242,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.ACE.OLEDB.16.0;Data Source=E:\Homokozo\BI\MostCommonWords\data\output_scores.xlsx;Extended Properties="Excel 12.0 XML;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.ACE.OLEDB.16.0;Data Source=D:\SSIS\most-common-words\data\output_scores.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2257,7 +2257,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">E:\Homokozo\BI\MostCommonWords\data\output_scores.xlsx</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\SSIS\most-common-words\data\output_scores.xlsx</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2330,7 +2330,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">E:\Homokozo\BI\MostCommonWords\data\output_scores.xlsx</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\SSIS\most-common-words\data\output_scores.xlsx</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -2419,7 +2419,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">E:\Homokozo\BI\MostCommonWords\data\error.txt</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">D:\SSIS\most-common-words\data\error.txt</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>

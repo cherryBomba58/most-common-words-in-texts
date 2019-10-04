@@ -11,8 +11,8 @@
   DTS:LocaleID="1038"
   DTS:ObjectName="Part3"
   DTS:PackageType="5"
-  DTS:VersionBuild="41"
-  DTS:VersionGUID="{C7C69914-2C56-4126-8147-EEE227C0780B}">
+  DTS:VersionBuild="45"
+  DTS:VersionGUID="{06A8AB5C-AE77-44CA-A193-BF6AC5209CC1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="E:\Homokozo\BI\MostCommonWords\data\input_text.txt">
+          DTS:ConnectionString="D:\SSIS\most-common-words\data\input_text.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Text"
-              DTS:DTSID="{D4599C12-514D-4600-BB33-EE21FD4D2408}"
+              DTS:DTSID="{AFB9632E-B0EC-462B-95E7-0ED5FD828DAF}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -58,7 +58,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="E:\Homokozo\BI\MostCommonWords\data\output_scores.txt">
+          DTS:ConnectionString="D:\SSIS\most-common-words\data\output_scores.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -67,7 +67,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Term"
-              DTS:DTSID="{8DD7E621-F4C8-4481-93F9-E5171B4F8BB9}"
+              DTS:DTSID="{20B7785F-1075-448F-8993-2984A8484566}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="Score"
-              DTS:DTSID="{DF406C70-0667-4932-AF04-89E5D35F0E83}"
+              DTS:DTSID="{556225CA-5F3D-42F3-9EDB-F2052A3CC936}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -94,7 +94,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="E:\Homokozo\BI\MostCommonWords\data\error.txt">
+          DTS:ConnectionString="D:\SSIS\most-common-words\data\error.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -103,7 +103,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Text"
-              DTS:DTSID="{29BA45D4-8B5F-4F31-A5CD-2FE391F66D66}"
+              DTS:DTSID="{3F31F77B-428B-4899-BD92-BEB6681293E5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -111,7 +111,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{4AE5F2B7-0279-4536-A848-D19776C665DA}"
+              DTS:DTSID="{EB8959A5-1C47-48F0-90F4-03524EF4B30C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -119,7 +119,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{03453271-B3C0-47C3-9D70-115361FAE19A}"
+              DTS:DTSID="{301A086F-BCDB-437C-AD2E-33ABF091E6B5}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -199,7 +199,7 @@
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="E:\Homokozo\BI\MostCommonWords\data\texts" />
+              Folder="D:\SSIS\most-common-words\data\texts" />
             <FEFEProperty
               FileSpec="*.txt" />
             <FEFEProperty
@@ -385,8 +385,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{B995CADA-DED2-4D53-A3E4-746517D32131}"
-          DTS:ObjectName="{B995CADA-DED2-4D53-A3E4-746517D32131}"
+          DTS:DTSID="{7C08398C-4CDC-4155-A999-4182B2DB7BC6}"
+          DTS:ObjectName="{7C08398C-4CDC-4155-A999-4182B2DB7BC6}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::varFileName" />
       </DTS:ForEachVariableMappings>
@@ -890,7 +890,7 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="195,42"
+          Size="196,42"
           Id="Package\Delete common input file"
           TopLeft="101,350" />
         <NodeLayout
@@ -900,17 +900,17 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="195,87"
-          Size="195,130"
+          PanelSize="196,87"
+          Size="196,130"
           Id="Package\Foreach for files in folder"
           TopLeft="106.5,62" />
         <NodeLayout
-          Size="195,42"
+          Size="196,42"
           Id="Package\Lyrics analyzing"
           TopLeft="106.5,248" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="204,192">
+          TopLeft="204.5,192">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -932,7 +932,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="201.25,290">
+          TopLeft="201.75,290">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

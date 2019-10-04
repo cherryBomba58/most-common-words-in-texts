@@ -11,8 +11,8 @@
   DTS:LocaleID="1038"
   DTS:ObjectName="Part2"
   DTS:PackageType="5"
-  DTS:VersionBuild="62"
-  DTS:VersionGUID="{E9904EEC-5135-4819-850A-ADF66377300C}">
+  DTS:VersionBuild="64"
+  DTS:VersionGUID="{EFD29E53-8E60-475D-969D-F3B0EA080403}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="E:\Homokozo\BI\MostCommonWords\data\error.txt">
+          DTS:ConnectionString="D:\SSIS\most-common-words\data\error.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -38,7 +38,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Text"
-              DTS:DTSID="{3ACAE636-1015-4B88-9F3C-05EF654999D9}"
+              DTS:DTSID="{A73FA560-1776-4004-8745-927E955CB26D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -46,7 +46,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{033D6533-3ACB-44EE-9B5F-2673CA6911A4}"
+              DTS:DTSID="{CC6930D5-D98E-4498-A31C-FCA1DFDC8A0A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -54,7 +54,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{3B564563-AD48-4479-AE93-D0101FC379C9}"
+              DTS:DTSID="{D31293DA-9235-4A43-B822-A1D658FA6DE9}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -165,7 +165,7 @@
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="E:\Homokozo\BI\MostCommonWords\data\texts" />
+              Folder="D:\SSIS\most-common-words\data\texts" />
             <FEFEProperty
               FileSpec="*.txt" />
             <FEFEProperty
@@ -656,7 +656,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <ExpressionTask
-              Expression="@[User::outputFileName]=&quot;E:\\Homokozo\\BI\\MostCommonWords\\data\\outputs\\output_scores_&quot;&#xA;+SUBSTRING( @[User::varFileName], FINDSTRING( &quot;E:\\Homokozo\\BI\\MostCommonWords\\data\\texts\\&quot;, &quot;\\&quot;, 6)+1, 50)" />
+              Expression="@[User::outputFileName]=&quot;D:\\SSIS\\most-common-words\\data\\outputs\\output_scores_&quot;&#xA;+SUBSTRING( @[User::varFileName], FINDSTRING( &quot;D:\\SSIS\\most-common-words\\data\\texts\\&quot;, &quot;\\&quot;, 5)+1, 50)" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -673,8 +673,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{821D1F9E-EA8A-4D5E-B348-D3D31A2B5BB8}"
-          DTS:ObjectName="{821D1F9E-EA8A-4D5E-B348-D3D31A2B5BB8}"
+          DTS:DTSID="{11A8C4AD-710E-48D3-85C0-24406F24A3FB}"
+          DTS:ObjectName="{11A8C4AD-710E-48D3-85C0-24406F24A3FB}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::varFileName" />
       </DTS:ForEachVariableMappings>
@@ -800,7 +800,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -846,7 +848,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1038"
   DTS:ObjectName="Part4"
   DTS:PackageType="5"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{0D197119-8578-4E2D-8297-ED9E1E05AF43}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{63E5CD3D-140B-431B-9C08-BBE7E77BA497}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="E:\Homokozo\BI\MostCommonWords\data\input_text.txt">
+          DTS:ConnectionString="D:\SSIS\most-common-words\data\input_text.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Text"
-              DTS:DTSID="{74E55D11-B05E-4C57-835D-A70260E61454}"
+              DTS:DTSID="{79DE3760-A8E7-480E-B487-78FC6D7831A9}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -52,7 +52,7 @@
       DTS:ObjectName="Destination Excel manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=E:\Homokozo\BI\MostCommonWords\data\output_scores.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=D:\SSIS\most-common-words\data\output_scores.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -68,7 +68,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="65001"
-          DTS:ConnectionString="E:\Homokozo\BI\MostCommonWords\data\error.txt">
+          DTS:ConnectionString="D:\SSIS\most-common-words\data\error.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -77,7 +77,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Text"
-              DTS:DTSID="{E78502F2-0BF4-4D60-9004-3DDEC7E4C8E0}"
+              DTS:DTSID="{1B3A5C65-899C-4926-861D-E8CB1C325F1C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -85,7 +85,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{C84F6047-D234-40AA-972F-8EDEFF150FB4}"
+              DTS:DTSID="{7A88F855-E419-4E35-B2E8-7EB895B27B8C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -93,7 +93,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{1C2ED7B1-116A-4ABD-B711-F6F24EF8A77F}"
+              DTS:DTSID="{5B33DD42-9A84-470A-B5E2-B2A6BAA3FB00}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -173,7 +173,7 @@
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="E:\Homokozo\BI\MostCommonWords\data\texts" />
+              Folder="D:\SSIS\most-common-words\data\texts" />
             <FEFEProperty
               FileSpec="*.txt" />
             <FEFEProperty
@@ -359,8 +359,8 @@
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{007AA2C9-EDA0-425D-BBA3-33C6522C73D7}"
-          DTS:ObjectName="{007AA2C9-EDA0-425D-BBA3-33C6522C73D7}"
+          DTS:DTSID="{880D4A8F-B390-4567-AFA7-CDD4413BCF77}"
+          DTS:ObjectName="{880D4A8F-B390-4567-AFA7-CDD4413BCF77}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::varFileName" />
       </DTS:ForEachVariableMappings>
